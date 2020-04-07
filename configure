@@ -7785,7 +7785,7 @@ case "$target_name" in
 esac
 target_bigendian="no"
 case "$target_name" in
-  armeb|aarch64_be|hppa|lm32|m68k|microblaze|mips|mipsn32|mips64|moxie|or1k|ppc|ppc64|ppc64abi32|s390x|sh4eb|sparc|sparc64|sparc32plus|xtensaeb)
+  armeb|aarch64_be|hppa|lm32|m68k|microblaze|mips|mipsn32|mips64|moxie|or1k|ppc|ppc64|ppc64abi32|s390x|sh4eb|sparc|sparc64|sparc32plus|xtensaeb|chip8)
   target_bigendian="yes"
   ;;
 esac
@@ -7981,6 +7981,10 @@ case "$target_name" in
     TARGET_SYSTBL_ABI=common
     bflt="yes"
     mttcg="yes"
+  ;;
+  chip8)
+    TARGET_ARCH=chip8
+    TARGET_BASE_ARCH=chip8
   ;;
   *)
     error_exit "Unsupported target CPU"

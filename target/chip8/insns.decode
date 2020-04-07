@@ -1,0 +1,53 @@
+#
+# CHIP8 instruction decode definitions.
+#
+# Copyright (c) 2018 Richard Henderson <rth@twiddle.net>
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, see <http://www.gnu.org/licenses/>.
+#
+
+CLS     0000 0000 1110 0000
+RET     0000 0000 1110 1110
+JP      0001 nnn:12
+CALL    0010 nnn:12
+SE_i    0011 x:4 kk:8
+SNE_i   0100 x:4 kk:8
+SE_r    0101 x:4 y:4 0000
+LD_i    0110 x:4 kk:8
+ADD_i   0111 x:4 kk:8
+LD_r    1000 x:4 y:4 0000
+OR      1000 x:4 y:4 0001
+AND     1000 x:4 y:4 0010
+XOR     1000 x:4 y:4 0011
+ADD_r   1000 x:4 y:4 0100
+SUB     1000 x:4 y:4 0101
+SHR     1000 x:4 y:4 0110
+SUBN    1000 x:4 y:4 0111
+SHL     1000 x:4 y:4 1110
+SNE_r   1001 x:4 y:4 0000
+LDI     1010 nnn:12
+JP_off  1011 nnn:12
+RND     1100 x:4 kk:8
+DRW     1101 x:4 y:4 n:4
+SKP     1110 x:4 1001 1110
+SKNP    1110 x:4 1010 0001
+LDDT    1111 x:4 0000 0111
+LDK     1111 x:4 0000 1010
+STDT    1111 x:4 0001 0101
+STST    1111 x:4 0001 1000
+ADDI    1111 x:4 0001 1110
+DIG     1111 x:4 0010 1001
+BCD     1111 x:4 0011 0011
+STM     1111 x:4 0101 0101
+LDM     1111 x:4 0110 0101

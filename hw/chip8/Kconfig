@@ -1,0 +1,4 @@
+config CHIP8_SIM
+    bool
+    select SERIAL
+    select OMPIC

@@ -35,6 +35,7 @@
 #pragma GCC poison TARGET_TRICORE
 #pragma GCC poison TARGET_UNICORE32
 #pragma GCC poison TARGET_XTENSA
+#pragma GCC poison TARGET_CHIP8
 
 #pragma GCC poison TARGET_ALIGNED_ONLY
 #pragma GCC poison TARGET_HAS_BFLT
